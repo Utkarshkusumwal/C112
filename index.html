@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <h1 id="heading">Face Recognition Web App</h1>
+            <br>
+            <hr>
+            <h3 style="font-family: cursive; font-weight: 900; color: white;">Model is trained to identify the following
+                objects:</h3>
+            <br>
+            <hr>
+            <h4>Mother</h4>
+            <br>
+            <hr>
+            <h4>Father</h4>
+            <br>
+            <hr>
+            <h4>GrandMother</h4>
+            <br>
+            <hr>
+            <h4>GrandFather</h4>
+            <br>
+            <hr>
+            <h4>Brother</h4>
+            <br>
+            <hr>
+            <h4>Dog</h4>
+            <br>
+            <hr>
+            <label>Webcam View</label>
+            <br>
+            <div id="camera"></div>
+            <br>
+            <hr>
+            <div id="result"></div>
+            <br>
+            <hr>
+            <button onclick="take_snapshot()" class="btn btn-warning">Capture the Image</button>
+            <br><br>
+            <button onclick="check()" class="btn btn-info">Identify the Image</button>
+            <br><br>
+            <p style="font-size: 22px;">Object : <span id="result_object_name"></span></p>
+            <p style="font-size: 22px;">Accuracy : <span id="result_object_accuracy"></span></p>
+        </div>
+    </center>
+</body>
+<script src="main.js"></script>
+
+</html>
